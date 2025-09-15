@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.09.2025</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div>
+        <p>Застосовується до тегів p, вкладених у div, на першому рівні, вага 0-0-2</p>
+    </div>
+
+    <h1>Селектор: тег h1, вага 0-0-1</h1>
+
+    <p class="red-text">Селектор: клас .red-text, вага 0-1-0</p>
+
+    <p id="unique">Селектор: id #unique, вага 1-0-0</p>
+
+    <p title="note">Селектор: атрибут [title], вага 0-1-0</p>
+
+    <div>
+        <span>Селектор: section span (вкладений), вага 0-0-2</span>
+    </div>
+
+    <ul>
+        <li>Селектор: ul > li, вага 0-0-2</li>
+    </ul>
+
+    <div class="box sequence">
+        <p>Селектор: .box.sequence p, вага 0-2-1</p>
+    </div>
+
+    <h2 class="highlight">Селектор: h2.highlight, вага 0-1-1</h2>
+
+    <button type="button">Селектор: button[type="button"], вага 0-1-1</button>
+
+    <div id="special" class="fancy">
+        Селектор: #special.fancy, вага 1-1-0
+    </div>
+</body>
+</html>
