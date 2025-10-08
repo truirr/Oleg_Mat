@@ -4,7 +4,7 @@
   font-weight:300;
   font-display:swap;
   src:local("Roboto Light"),local("Roboto-Light"),
-      url("/fonts/Roboto/static/Roboto-Light.ttf") format("truetype");
+      url("./fonts/Roboto/static/Roboto-Light.ttf") format("truetype");
 }
 @font-face{
   font-family:"Roboto";
@@ -12,7 +12,7 @@
   font-weight:400;
   font-display:swap;
   src:local("Roboto"),local("Roboto Regular"),
-      url("/fonts/Roboto/static/Roboto-Regular.ttf") format("truetype");
+      url("./fonts/Roboto/static/Roboto-Regular.ttf") format("truetype");
 }
 @font-face{
   font-family:"Roboto";
@@ -20,7 +20,7 @@
   font-weight:400;
   font-display:swap;
   src:local("Roboto Italic"),
-      url("/fonts/Roboto/static/Roboto-Italic.ttf") format("truetype");
+      url("./fonts/Roboto/static/Roboto-Italic.ttf") format("truetype");
 }
 @font-face{
   font-family:"Roboto";
@@ -28,7 +28,7 @@
   font-weight:500;
   font-display:swap;
   src:local("Roboto Medium"),local("Roboto-Medium"),
-      url("/fonts/Roboto/static/Roboto-Medium.ttf") format("truetype");
+      url("./fonts/Roboto/static/Roboto-Medium.ttf") format("truetype");
 }
 @font-face{
   font-family:"Roboto";
@@ -36,7 +36,7 @@
   font-weight:700;
   font-display:swap;
   src:local("Roboto Bold"),local("Roboto-Bold"),
-      url("/fonts/Roboto/static/Roboto-Bold.ttf") format("truetype");
+      url("./fonts/Roboto/static/Roboto-Bold.ttf") format("truetype");
 }
 
 
@@ -46,7 +46,7 @@
   font-weight:400;
   font-display:swap;
   src:local("Roboto Condensed"),local("RobotoCondensed-Regular"),
-      url("/fonts/Roboto/static/Roboto_Condensed-Regular.ttf") format("truetype");
+      url("./fonts/Roboto/static/Roboto_Condensed-Regular.ttf") format("truetype");
 }
 @font-face{
   font-family:"Roboto Condensed";
@@ -54,7 +54,7 @@
   font-weight:700;
   font-display:swap;
   src:local("Roboto Condensed Bold"),local("RobotoCondensed-Bold"),
-      url("/fonts/Roboto/static/Roboto_Condensed-Bold.ttf") format("truetype");
+      url("./fonts/Roboto/static/Roboto_Condensed-Bold.ttf") format("truetype");
 }
 
 :root{
