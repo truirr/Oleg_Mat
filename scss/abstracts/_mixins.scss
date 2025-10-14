@@ -1,4 +1,6 @@
-﻿@mixin flex-center {
+﻿@use "variables" as *;
+
+@mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;

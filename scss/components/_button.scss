@@ -1,4 +1,5 @@
-﻿.btn{
+﻿@use "../abstracts" as *;
+.btn{
   @include button-base();
   background:$brand;
   color:$white;
@@ -9,3 +10,4 @@
     height:56px;
   }
 }
+

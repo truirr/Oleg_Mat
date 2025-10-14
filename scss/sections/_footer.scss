@@ -1,4 +1,5 @@
-﻿.footer{
+﻿@use "../abstracts" as *;
+.footer{
   background:$brand;
   min-height:151px;
   color:$white;
@@ -42,3 +43,4 @@
     .footer-inner{ padding:0 16px; align-items:center; text-align:center; }
   }
 }
+

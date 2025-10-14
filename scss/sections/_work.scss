@@ -1,4 +1,5 @@
-﻿.work{
+﻿@use "../abstracts" as *;
+.work{
   background:$bg-1;
   min-height:1004px;
   display:flex;
@@ -68,3 +69,4 @@
     .video{ max-width:100%; }
   }
 }
+

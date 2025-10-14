@@ -1,4 +1,5 @@
-﻿.hero{
+﻿@use "../abstracts" as *;
+.hero{
   background:$bg-1;
   width:100%;
   min-height:750px;
@@ -44,3 +45,4 @@
     .btn{ display:flex; margin-left:auto; margin-right:auto; }
   }
 }
+

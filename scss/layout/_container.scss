@@ -1,5 +1,7 @@
-﻿.container {
+﻿@use "../abstracts" as *;
+.container {
   max-width: $container-max;
   margin: 0 auto;
   padding: 0 $container-pad;
 }
+

@@ -1,4 +1,6 @@
-﻿$breakpoints: (
+﻿@use "sass:map";
+
+$breakpoints: (
   xs: 340px,
   s: 400px,
   sm: 576px,
@@ -8,13 +10,15 @@
 );
 
 @mixin respond($bp, $dir: max) {
-  $size: map-get($breakpoints, $bp);
-  @if $size == null { @error "Unknown breakpoint: #{$bp}"; }
+  $size: map.get($breakpoints, $bp);
+  @if $size == null {
+    @error "Unknown breakpoint: #{$bp}";
+  }
   @if $dir == max {
     @media (max-width: $size) { @content; }
   } @else if $dir == min {
     @media (min-width: $size) { @content; }
   } @else {
-    @error "Unknown direction: #{$dir}. Use 'max' or 'min'.";
+    @error "Unknown direction: #{$dir}. Use ''max'' or ''min''.";
   }
 }

@@ -1,4 +1,5 @@
-﻿.stats {
+﻿@use "../abstracts" as *;
+.stats {
   background:$brand;
   min-height:250px;
   display:flex;
@@ -107,3 +108,4 @@
     .stats-list{ gap: 16px 12px; }
   }
 }
+
