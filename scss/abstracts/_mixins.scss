@@ -1,0 +1,27 @@
+﻿@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-base($w: 225px, $h: 65px) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $w;
+  height: $h;
+  text-decoration: none;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 164.1%;
+  letter-spacing: 0.1em;
+}
+
+@mixin title($size, $lh: 164.1%) {
+  font-family: $ff-roboto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: $size;
+  line-height: $lh;
+}

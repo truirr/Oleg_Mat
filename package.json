@@ -1,0 +1,23 @@
+{
+  "name": "oleg_mat",
+  "version": "1.0.0",
+  "description": "Це мій проект домашнього завдання. Тут є HTML, CSS та JS файли, а також структура папок для шрифтів, зображень та додаткових сторінок.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truirr/Oleg_Mat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truirr/Oleg_Mat/issues"
+  },
+  "homepage": "https://github.com/truirr/Oleg_Mat#readme",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

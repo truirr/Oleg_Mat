@@ -1,0 +1,44 @@
+﻿.footer{
+  background:$brand;
+  min-height:151px;
+  color:$white;
+  display:flex;
+  align-items:flex-start;
+  width:100%;
+
+  .footer-inner{
+    max-width:1920px;
+    padding:50px 0 50px 406px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-name{ @include title(21px, normal); margin-bottom:6px; }
+  .footer-copy{
+    font-family:$ff-roboto;
+    font-weight:400;
+    font-size:12px;
+    line-height:164.1%;
+    opacity:.9;
+  }
+
+  @include respond(lg){
+    .footer-inner{ padding-left:60px; align-items:flex-start; }
+  }
+
+  @include respond(md){
+    min-height:auto;
+    padding:28px 0;
+
+    .footer-inner{
+      padding:0 32px;
+      align-items:center;
+      text-align:center;
+    }
+  }
+
+  @include respond(sm){
+    .footer-inner{ padding:0 16px; align-items:center; text-align:center; }
+  }
+}

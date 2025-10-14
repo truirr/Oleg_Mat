@@ -1,0 +1,11 @@
+﻿.btn{
+  @include button-base();
+  background:$brand;
+  color:$white;
+
+  @include respond(sm){
+    width:100%;
+    max-width:280px;
+    height:56px;
+  }
+}

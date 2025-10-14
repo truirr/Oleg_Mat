@@ -1,0 +1,9 @@
+﻿* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: $ff-base;
+  color: $text;
+  background: #fff;
+}
+img, video { max-width: 100%; height: auto; }
