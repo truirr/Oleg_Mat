@@ -1,0 +1,111 @@
+﻿@use "../abstracts" as *;
+.stats {
+  background:$brand;
+  min-height:250px;
+  display:flex;
+  align-items:center;
+  color:$white;
+  width:100%;
+
+  .stats-inner {
+    max-width:1920px;
+    padding:0 40px;
+    margin:0 auto;
+  }
+
+  .stats-list{
+    list-style:none;
+    margin:0;
+    padding:0 60px;
+    display:grid;
+    grid-template-columns: repeat(6, max-content);
+    justify-content: center;
+    align-items: center;
+    column-gap: 72px;
+    row-gap: 0;
+  }
+
+  .stat{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 20px;
+    color:#fff;
+
+    .stat-icon{
+      display:block;
+      filter:brightness(0) invert(1);
+    }
+
+    .stat-text{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      color:#fff;
+
+      .stat-num{
+        font-family:$ff-roboto;
+        font-weight:500;
+        font-size:21px;
+        line-height:normal;
+      }
+      .stat-label{
+        font-family:$ff-roboto;
+        font-weight:400;
+        font-size:16px;
+        line-height:164.1%;
+        opacity:1;
+      }
+    }
+  }
+
+  @include respond(xl) { .stats-list{ column-gap:48px; } }
+
+  @include respond(lg){
+    padding:24px 0;
+    .stats-inner{ padding:0 24px; }
+    .stats-list{
+      grid-template-columns: repeat(4, max-content);
+      column-gap: 40px;
+      justify-content: center;
+    }
+  }
+
+  @include respond(md){
+    .stats-list{
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 20px;
+    }
+    .stat{
+      justify-content: center;
+      gap: 14px;
+      text-align: left;
+    }
+  }
+
+  @include respond(sm){
+    .stats-inner{ padding: 0 16px; }
+    .stats-list{
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+    }
+    .stat-icon{ width: 32px; height: 32px; }
+  }
+
+  @include respond(s){
+    .stats-list{ grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px 12px; }
+    .stat{ gap: 10px; }
+    .stat-icon{ width: 28px; height: 28px; }
+    .stat .stat-text{
+      .stat-num{ font-size:16px; }
+      .stat-label{ font-size:12px; }
+    }
+  }
+
+  @include respond(xs){
+    .stat{ flex-direction:column; align-items:center; text-align:center; gap:6px; }
+    .stat .stat-text{ align-items:center; }
+    .stats-list{ gap: 16px 12px; }
+  }
+}
+

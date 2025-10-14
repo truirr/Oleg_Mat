@@ -1,0 +1,24 @@
+﻿@use "../abstracts" as *;
+.nav{
+  display:flex;
+  gap:51px;
+  font-size:16px;
+  line-height:164.1%;
+  font-family:$ff-roboto;
+  font-weight:500;
+  letter-spacing:0.1em;
+
+  a{
+    text-decoration:none;
+    color:black;
+    opacity:.75;
+  }
+
+  @include respond(md){
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:24px;
+    font-size:14px;
+  }
+}
+

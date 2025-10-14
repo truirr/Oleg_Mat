@@ -1,0 +1,40 @@
+﻿@use "../abstracts" as *;
+.about{
+  background:$bg-2;
+  min-height:359px;
+  display:flex;
+  align-items:center;
+  width:100%;
+
+  .about-inner{
+    max-width:1920px;
+    margin:0 auto;
+    text-align:center;
+    padding:40px 20px;
+  }
+
+  .section-title{
+    font-family:$ff-roboto;
+    font-weight:500;
+    font-size:32px;
+    line-height:normal;
+    margin:0 0 50px;
+  }
+
+  .section-text{
+    max-width:545px;
+    margin:0 auto;
+    color:$muted;
+    font-family:$ff-roboto;
+    font-weight:400;
+    font-size:16px;
+    line-height:164.1%;
+    text-align:center;
+  }
+
+  @include respond(md){
+    min-height:auto;
+    .about-inner{ padding:40px 20px; }
+  }
+}
+

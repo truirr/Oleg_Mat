@@ -1,0 +1,27 @@
+﻿{
+    "name":  "oleg_mat",
+    "version":  "1.0.0",
+    "description":  "Р¦Рµ РјС–Р№ РїСЂРѕРµРєС‚ РґРѕРјР°С€РЅСЊРѕРіРѕ Р·Р°РІРґР°РЅРЅСЏ. РўСѓС‚ С” HTML, CSS С‚Р° JS С„Р°Р№Р»Рё, Р° С‚Р°РєРѕР¶ СЃС‚СЂСѓРєС‚СѓСЂР° РїР°РїРѕРє РґР»СЏ С€СЂРёС„С‚С–РІ, Р·РѕР±СЂР°Р¶РµРЅСЊ С‚Р° РґРѕРґР°С‚РєРѕРІРёС… СЃС‚РѕСЂС–РЅРѕРє.",
+    "main":  "index.js",
+    "scripts":  {
+                    "test":  "echo \"Error: no test specified\" \u0026\u0026 exit 1",
+                    "build:css":  "sass scss/index.scss:index.css --style=expanded",
+                    "watch:css":  "sass --watch scss/index.scss:index.css --style=expanded"
+                },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/truirr/Oleg_Mat.git"
+                   },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "bugs":  {
+                 "url":  "https://github.com/truirr/Oleg_Mat/issues"
+             },
+    "homepage":  "https://github.com/truirr/Oleg_Mat#readme",
+    "devDependencies":  {
+                            "sass":  "^1.93.2"
+                        }
+}

@@ -1,0 +1,72 @@
+﻿@use "../abstracts" as *;
+.work{
+  background:$bg-1;
+  min-height:1004px;
+  display:flex;
+  align-items:flex-start;
+  width:100%;
+
+  .work-inner{
+    max-width:1920px;
+    margin:0 auto;
+    padding-top: 100px;
+    text-align:center;
+  }
+
+  .section-title{ font-family:$ff-roboto; font-weight:500; font-size:32px; }
+  .section-text{
+    max-width:545px; margin:0 auto; color:$muted; font-family:$ff-roboto;
+    font-weight:400; font-size:16px; line-height:164.1%;
+  }
+
+  .video{
+    width: 1110px;
+    height: 600px;
+    margin:50px auto 0;
+    position:relative;
+    overflow:hidden;
+
+    &-img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    &-play{
+      position:absolute;
+      inset:0;
+      margin:auto;
+      border:none;
+      cursor:pointer;
+
+      &::before{
+        content:"";
+        position:absolute;
+        left:34px;
+        top:27px;
+        width:0; height:0;
+        border-left:28px solid $brand;
+        border-top:16px solid transparent;
+        border-bottom:16px solid transparent;
+      }
+    }
+  }
+
+  @include respond(xl){
+    .hero-inner{ padding-left:200px; padding-right:40px; } // как в исходнике
+    .video{ width:90%; height:auto; aspect-ratio: 1110 / 600; }
+  }
+
+  @include respond(lg){ min-height:auto; }
+
+  @include respond(md){
+    padding-top:60px;
+    .video{ width:100%; max-width:700px; margin:32px auto 0; aspect-ratio:1110 / 600; }
+  }
+
+  @include respond(sm){
+    .work-inner{ padding-top:40px; }
+    .video{ max-width:100%; }
+  }
+}
+
