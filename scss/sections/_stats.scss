@@ -16,13 +16,13 @@
   .stats-list{
     list-style:none;
     margin:0;
-    padding:0 60px;
+    padding: 0;
     display:grid;
-    grid-template-columns: repeat(6, max-content);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     justify-content: center;
     align-items: center;
-    column-gap: 72px;
-    row-gap: 0;
+    gap: 20px 72px; 
+    width:100%;
   }
 
   .stat{
@@ -31,6 +31,7 @@
     justify-content:center;
     gap: 20px;
     color:#fff;
+    min-width:0;
 
     .stat-icon{
       display:block;
@@ -61,15 +62,15 @@
 
   @include respond(xl) { .stats-list{ column-gap:48px; } }
 
-  @include respond(lg){
-    padding:24px 0;
-    .stats-inner{ padding:0 24px; }
-    .stats-list{
-      grid-template-columns: repeat(4, max-content);
-      column-gap: 40px;
-      justify-content: center;
-    }
+@include respond(lg){
+  padding:24px 0;
+  .stats-inner{ padding:0 24px; }
+  .stats-list{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 40px;
+    justify-content: center;
   }
+}
 
   @include respond(md){
     .stats-list{
