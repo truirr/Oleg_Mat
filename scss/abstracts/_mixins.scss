@@ -27,3 +27,32 @@
   font-size: $size;
   line-height: $lh;
 }
+
+@mixin fluid-container($max: 1920px, $padMin: 16px, $padFluid: 4vw, $padMax: 40px) {
+  width: 100%;
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: clamp($padMin, $padFluid, $padMax);
+}
+
+@mixin fluid-grid(
+  $colMinPxMin: 140px,
+  $colMinFluid: 16vw,
+  $colMinPxMax: 190px,
+  $gapMin: 12px,
+  $gapFluid: 4vw,
+  $gapMax: 72px
+) {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp($colMinPxMin, $colMinFluid, $colMinPxMax), 1fr)
+  );
+  gap: clamp($gapMin, $gapFluid, $gapMax);
+  align-items: center;
+  justify-items: center;
+}
+
+@mixin fluid-size($prop, $min, $fluid, $max) {
+  #{$prop}: clamp($min, $fluid, $max);
+}
