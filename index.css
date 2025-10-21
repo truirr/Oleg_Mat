@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -239,136 +240,6 @@ img, video {
   }
 }
 
-.stats {
-  background: #34547A;
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  color: #FFFFFF;
-  width: 100%;
-}
-.stats .stats-inner {
-  max-width: 1920px;
-  padding: 0 40px;
-  margin: 0 auto;
-}
-.stats .stats-list {
-  list-style: none;
-  margin: 0;
-  padding: 0 60px;
-  display: grid;
-  grid-template-columns: repeat(6, max-content);
-  justify-content: center;
-  align-items: center;
-  column-gap: 72px;
-  row-gap: 0;
-}
-.stats .stat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  color: #fff;
-}
-.stats .stat .stat-icon {
-  display: block;
-  filter: brightness(0) invert(1);
-}
-.stats .stat .stat-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #fff;
-}
-.stats .stat .stat-text .stat-num {
-  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 21px;
-  line-height: normal;
-}
-.stats .stat .stat-text .stat-label {
-  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 164.1%;
-  opacity: 1;
-}
-@media (max-width: 1200px) {
-  .stats .stats-list {
-    column-gap: 48px;
-  }
-}
-@media (max-width: 992px) {
-  .stats {
-    padding: 24px 0;
-  }
-  .stats .stats-inner {
-    padding: 0 24px;
-  }
-  .stats .stats-list {
-    grid-template-columns: repeat(4, max-content);
-    column-gap: 40px;
-    justify-content: center;
-  }
-}
-@media (max-width: 768px) {
-  .stats .stats-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-  }
-  .stats .stat {
-    justify-content: center;
-    gap: 14px;
-    text-align: left;
-  }
-}
-@media (max-width: 576px) {
-  .stats .stats-inner {
-    padding: 0 16px;
-  }
-  .stats .stats-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-  .stats .stat-icon {
-    width: 32px;
-    height: 32px;
-  }
-}
-@media (max-width: 400px) {
-  .stats .stats-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 12px;
-  }
-  .stats .stat {
-    gap: 10px;
-  }
-  .stats .stat-icon {
-    width: 28px;
-    height: 28px;
-  }
-  .stats .stat .stat-text .stat-num {
-    font-size: 16px;
-  }
-  .stats .stat .stat-text .stat-label {
-    font-size: 12px;
-  }
-}
-@media (max-width: 340px) {
-  .stats .stat {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 6px;
-  }
-  .stats .stat .stat-text {
-    align-items: center;
-  }
-  .stats .stats-list {
-    gap: 16px 12px;
-  }
-}
-
 .work {
   background: #EEEFF1;
   min-height: 1004px;
@@ -515,6 +386,84 @@ img, video {
     padding: 0 16px;
     align-items: center;
     text-align: center;
+  }
+}
+
+.stats {
+  background: #34547A;
+  color: #FFFFFF;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(20px, 4vw, 32px);
+}
+.stats .stats-inner {
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+}
+.stats {
+  /* --- Лента на flex: гарантированные 49px по горизонтали --- */
+}
+.stats .stats-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: <row> <column>  → вертикальный оставим плавным (можешь поставить фикс, если надо) */
+  row-gap: clamp(12px, 2vw, 20px);
+  column-gap: 49px;
+  justify-content: center; /* центрируем содержимое */
+  align-items: center;
+}
+.stats .stat {
+  /* не даём растягиваться: каждая карточка шириной по своему контенту */
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(10px, 2.2vw, 20px);
+  min-width: 0;
+  color: inherit;
+}
+.stats .stat .stat-icon {
+  display: block;
+  width: clamp(24px, 4.2vw, 40px);
+  height: clamp(24px, 4.2vw, 40px);
+  filter: brightness(0) invert(1);
+  flex: 0 0 auto;
+}
+.stats .stat .stat-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+.stats .stat .stat-text .stat-num {
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 2.2vw, 22px);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.stats .stat .stat-text .stat-label {
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: clamp(12px, 1.8vw, 16px);
+  line-height: 1.35;
+}
+@media (max-width: 360px) {
+  .stats .stat {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+  .stats .stat .stat-text {
+    align-items: center;
   }
 }
 
