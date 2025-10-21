@@ -12,7 +12,6 @@
     @include fluid-container(1920px, 16px, 4vw, 40px);
   }
 
-  /* --- Лента на flex: гарантированные 49px по горизонтали --- */
   .stats-list {
     list-style: none;
     margin: 0;
@@ -21,16 +20,14 @@
 
     display: flex;
     flex-wrap: wrap;
-    /* gap: <row> <column>  → вертикальный оставим плавным (можешь поставить фикс, если надо) */
     row-gap: clamp(12px, 2vw, 20px);
     column-gap: 49px;
 
-    justify-content: center;  /* центрируем содержимое */
+    justify-content: center;
     align-items: center;
   }
 
   .stat {
-    /* не даём растягиваться: каждая карточка шириной по своему контенту */
     flex: 0 0 auto;
 
     display: flex;
